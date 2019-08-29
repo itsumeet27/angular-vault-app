@@ -4,4 +4,5 @@ export interface UserData {
     documentType?: string;
     subject?: string;
     link?: string;
+    status?: string;
 }

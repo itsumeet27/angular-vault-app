@@ -14,4 +14,5 @@ export class UserDataService {
   getData(): Observable<UserData[]>{
   	return this.http.get<UserData[]>(this._url);
   }
+
 }

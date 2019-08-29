@@ -7,18 +7,23 @@
 			<th>Document Type</th>
 			<th>Subject</th>
 			<th>Open Document(link)</th>
+			<th>Status</th>
 			<th colspan="2">Action</th>
 		</thead>
 		<tbody>
 			<tr *ngFor = "let data of allData; let ndx = index">
-
 				<td scope="row">{{ ndx+1 }}</td>
 				<td>{{ data.documentId }}</td>
 				<td>{{ data.documentType }}</td>
 				<td>{{ data.subject }}</td>
 				<td><a href="{{ data.link }}">{{ data.link }}</a></td>
-				<td><a (click)="onEdit(customer)" title="Approve"><i class="fas fa-edit"></i></a></td>
-				<td><a (click)="onDelete(customer)" title="Reject"><i class="fas fa-trash"></i></a></td>
+				<td id="status">{{ data.status }}</td>
+				<td>
+					<input type="radio" name="statuscheck" value="{{ data.approval[0] }}" title="Accept" id="accepted">
+				</td>
+				<td>
+					<input type="radio" name="statuscheck" value="{{ data.approval[1] }}" title="Reject" id="rejected">
+				</td>
 			</tr>
 		</tbody>
 	</table>
