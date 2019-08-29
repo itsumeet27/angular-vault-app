@@ -1,0 +1,25 @@
+<h1 class="text-center">Data is loaded</h1>
+<div class="container-fluid">
+	<table class="table tabl-striped">
+		<thead>
+			<th>ID</th>
+			<th>Document ID</th>
+			<th>Document Type</th>
+			<th>Subject</th>
+			<th>Open Document(link)</th>
+			<th colspan="2">Action</th>
+		</thead>
+		<tbody>
+			<tr *ngFor = "let data of allData; let ndx = index">
+
+				<td scope="row">{{ ndx+1 }}</td>
+				<td>{{ data.documentId }}</td>
+				<td>{{ data.documentType }}</td>
+				<td>{{ data.subject }}</td>
+				<td><a href="{{ data.link }}">{{ data.link }}</a></td>
+				<td><a (click)="onEdit(customer)" title="Approve"><i class="fas fa-edit"></i></a></td>
+				<td><a (click)="onDelete(customer)" title="Reject"><i class="fas fa-trash"></i></a></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
