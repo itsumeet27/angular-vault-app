@@ -16,4 +16,6 @@ export class UserDataComponent implements OnInit {
   	this.dataService.getData().subscribe(data => this.allData = data);
   }
 
+  
+
 }

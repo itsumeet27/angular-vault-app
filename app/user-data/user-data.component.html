@@ -17,14 +17,15 @@
 				<td>{{ data.documentType }}</td>
 				<td>{{ data.subject }}</td>
 				<td><a href="{{ data.link }}">{{ data.link }}</a></td>
-				<td id="status">{{ data.status }}</td>
+				<td id="text">{{ data.status }}</td>
 				<td>
-					<input type="radio" name="statuscheck" value="{{ data.approval[0] }}" title="Accept" id="accepted">
+					<input type="radio" name="statuscheck" id="accepted" value="{{ data.approval[0] }}" title="Accept" onchange="myAcceptFunction()">
 				</td>
 				<td>
-					<input type="radio" name="statuscheck" value="{{ data.approval[1] }}" title="Reject" id="rejected">
+					<input type="radio" name="statuscheck" id="rejected" value="{{ data.approval[1] }}" title="Reject" onchange="myRejectFunction()">
 				</td>
 			</tr>
 		</tbody>
 	</table>
 </div>
+
